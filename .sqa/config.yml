@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/dnorcini/ChicagoCCDSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-vermilion-owl.sh
-        container: qc.acc_lanky-platinum-cougar
+        - /usr/bin/env sh .sqa/script.gimpy-eggplant-rottweiler.sh
+        container: qc.acc_snippy-blue-dalmatian
   QC.Doc:
     repos:
       github.com/dnorcini/ChicagoCCDSim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-orange-quail.sh
-        container: qc.doc_queasy-ultramarine-peccary
+        - /usr/bin/env sh .sqa/script.lumpy-platinum-cuscus.sh
+        container: qc.doc_boozy-gamboge-duck
       github.com/dnorcini/ChicagoCCDSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-cerise-cuttlefish.sh
-        container: qc.doc_snoopy-yellow-tamarin
+        - /usr/bin/env sh .sqa/script.scaly-teal-shrew.sh
+        container: qc.doc_woolly-alizarin-jaguar
       github.com/dnorcini/ChicagoCCDSim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-yellow-lizard.sh
-        container: qc.doc_flaky-xanthic-bonobo
+        - /usr/bin/env sh .sqa/script.leaky-salmon-spaniel.sh
+        container: qc.doc_scummy-chocolate-moth
   QC.Lic:
     repos:
       github.com/dnorcini/ChicagoCCDSim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-malachite-chamois.sh
-        container: qc.lic_baggy-rust-dollar
+        - /usr/bin/env sh .sqa/script.geeky-lavender-serval.sh
+        container: qc.lic_stuffy-crimson-starfish
   QC.Ver:
     repos:
       github.com/dnorcini/ChicagoCCDSim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-wisteria-angelfish.sh
-        container: qc.ver_surly-beige-bombay
+        - /usr/bin/env sh .sqa/script.craggy-cream-chinchilla.sh
+        container: qc.ver_sleazy-myrtle-mule
 timeout: 5400
