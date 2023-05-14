@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.10
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/dnorcini/ChicagoCCDSim:
+      branch: master
+      repo: https://github.com/dnorcini/ChicagoCCDSim
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/dnorcini/ChicagoCCDSim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-vermilion-owl.sh
+        container: qc.acc_lanky-platinum-cougar
+  QC.Doc:
+    repos:
+      github.com/dnorcini/ChicagoCCDSim find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-orange-quail.sh
+        container: qc.doc_queasy-ultramarine-peccary
+      github.com/dnorcini/ChicagoCCDSim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-cerise-cuttlefish.sh
+        container: qc.doc_snoopy-yellow-tamarin
+      github.com/dnorcini/ChicagoCCDSim markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-yellow-lizard.sh
+        container: qc.doc_flaky-xanthic-bonobo
+  QC.Lic:
+    repos:
+      github.com/dnorcini/ChicagoCCDSim licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-malachite-chamois.sh
+        container: qc.lic_baggy-rust-dollar
+  QC.Ver:
+    repos:
+      github.com/dnorcini/ChicagoCCDSim get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pasty-wisteria-angelfish.sh
+        container: qc.ver_surly-beige-bombay
+timeout: 5400
